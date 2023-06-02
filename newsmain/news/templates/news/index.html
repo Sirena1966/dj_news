@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+</head>
+<body>
+    {% if news %}
+        {% for i in news %}
+                <h3>{{ i.title }}</h3><br>
+                <p>{{ i.anons }}</p>
+                <img src="{{ i.src }}">
+                <a href=" ">Читать далее</a>
+                <br>
+                <p>{{ i.author }}</p><br>
+                <p>{{ i.genre }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Новостей нет!</p>
+    {% endif %}
+</body>
+</html>
